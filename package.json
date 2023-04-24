@@ -1,0 +1,26 @@
+{
+  "name": "apply-jobs",
+  "version": "1.0.0",
+  "description": "Tests using Cypress mocha",
+  "main": "index.js",
+  "scripts": {
+    "cypress:runner": "npx cypress open --browser chrome",
+    "cypress:test:execution": "npx cypress run",
+    "cypress:test:smoke": "npx cypress run --env grepTags=@smoke",
+    "cypress:test:smoke:e2e": "npx cypress run --env grepTags=@smoke+@e2e",
+    "cypress:test:unTagged": "npx cypress run --env grepUntagged=true"
+  },
+  "keywords": [
+    "cypress"
+  ],
+  "author": "cucumber",
+  "license": "ISC",
+  "devDependencies": {
+    "@cypress/grep": "^3.1.5",
+    "cypress": "^12.10.0",
+    "cypress-mochawesome-reporter": "^3.3.0"
+  },
+  "dependencies": {
+    "@antiadmin/anticaptchaofficial": "^1.0.31"
+  }
+}
